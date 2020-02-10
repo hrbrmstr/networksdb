@@ -9,7 +9,14 @@ org_networks(id, page = 1, api_key = networksdb_api_key())
 \arguments{
 \item{id}{id of an organisation (i.e. returned by \code{\link[=org_search]{org_search()}})}
 
+\item{page}{results pagination; see \code{return}}
+
 \item{api_key}{see \code{\link[=networksdb_api_key]{networksdb_api_key()}}}
+}
+\value{
+\code{list} with \code{total} (# of results for the search), \code{page} (the current page number), and
+\code{results} which is a data frame of search results. if \code{nrow()} of this data frame is >
+\code{total} then there are more pages available.
 }
 \description{
 Search for the public networks owned by an organisation.

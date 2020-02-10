@@ -1,7 +1,11 @@
 #' Search for the public networks owned by an organisation.
 #'
 #' @param id id of an organisation (i.e. returned by [org_search()])
+#' @param page results pagination; see `return`
 #' @param api_key see [networksdb_api_key()]
+#' @return `list` with `total` (# of results for the search), `page` (the current page number), and
+#'         `results` which is a data frame of search results. if `nrow()` of this data frame is >
+#'         `total` then there are more pages available.
 #' @export
 org_networks <- function(id, page = 1, api_key = networksdb_api_key()) { # ipv6
 

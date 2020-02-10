@@ -28,6 +28,19 @@ NetworksDB API.
 
 The following functions are implemented:
 
+  - `asn_info`: Search for an autonomous system
+  - `asn_nets`: Search for the networks announced by an autonomous
+    system
+  - `domains_in_network`: Perform a “mass” reverse DNS lookup to find
+    all the domain names pointing to any IPv4 or IPv6 address in the
+    given network
+  - `domains_on_ip`: Perform a reverse DNS lookup to find all the domain
+    names pointing to the given IPv4 or IPv6 address
+  - `ip_geo`: Request geolocation information for a given IPv4 or IPv6
+    Address.
+  - `ip_info`: Search for an IPv4 or IPv6 address
+  - `ips_for_domain`: Perform a forward DNS lookup to find all the IPv4
+    and IPv6 addresses pointed to by a given domain name
   - `networksdb_api_key`: Get or set NetworksDB Personal Access Token
   - `org_info`: Retreive information about an organisation.
   - `org_networks`: Search for the public networks owned by an
@@ -42,6 +55,8 @@ remotes::install_git("https://git.rud.is/hrbrmstr/networksdb.git")
 remotes::install_git("https://git.sr.ht/~hrbrmstr/networksdb")
 # or
 remotes::install_gitlab("hrbrmstr/networksdb")
+# or
+remotes::install_bitbucket("hrbrmstr/networksdb")
 # or
 remotes::install_github("hrbrmstr/networksdb")
 ```
@@ -61,10 +76,10 @@ packageVersion("networksdb")
 
 ## networksdb Metrics
 
-| Lang | \# Files |  (%) | LoC | (%) | Blank lines |  (%) | \# Lines |  (%) |
-| :--- | -------: | ---: | --: | --: | ----------: | ---: | -------: | ---: |
-| R    |        7 | 0.88 |  72 | 0.9 |          27 | 0.64 |       41 | 0.59 |
-| Rmd  |        1 | 0.12 |   8 | 0.1 |          15 | 0.36 |       28 | 0.41 |
+| Lang | \# Files |  (%) | LoC |  (%) | Blank lines |  (%) | \# Lines |  (%) |
+| :--- | -------: | ---: | --: | ---: | ----------: | ---: | -------: | ---: |
+| R    |       14 | 0.93 | 187 | 0.96 |          77 | 0.84 |       83 | 0.75 |
+| Rmd  |        1 | 0.07 |   8 | 0.04 |          15 | 0.16 |       28 | 0.25 |
 
 ## Code of Conduct
 
