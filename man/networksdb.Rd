@@ -4,9 +4,15 @@
 \name{networksdb}
 \alias{networksdb}
 \alias{networksdb-package}
-\title{...}
+\title{Query Organization, IP, DNS, and Network Info From NetworksDB}
 \description{
-A good description goes here otherwise CRAN checks fail.
+NetworksDB \url{https://networksdb.io} contains information about the public IPv4 and
+IPv6 addresses, networks and domains owned by companies and organisations across the world
+along with city-level IP geolocation data and autonomous system information. Tools are provided
+to query the NetworksDB API.
+}
+\references{
+\url{https://networksdb.io/api/docs}
 }
 \seealso{
 Useful links:
